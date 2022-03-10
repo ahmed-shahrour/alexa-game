@@ -33,3 +33,16 @@ const CancelAndStopIntentHandler = {
   },
 };
 
+const SessionEndedRequestHandler = {
+  canHandle(handlerInput) {
+    return (
+      Alexa.getRequestType(handlerInput.requestEnvelope) ===
+      'SessionEndedRequest'
+    );
+  },
+  handle(handlerInput) {
+    // Any clean-up logic goes here.
+    return handlerInput.responseBuilder.getResponse();
+  },
+};
+
