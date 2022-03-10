@@ -61,3 +61,11 @@ const ErrorHandler = {
   },
 };
 
+exports.handler = Alexa.SkillBuilders.custom()
+  .addRequestHandlers(
+    LaunchRequestHandler,
+    CancelAndStopIntentHandler,
+    SessionEndedRequestHandler
+  )
+  .addErrorHandlers(ErrorHandler)
+  .lambda();
