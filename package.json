@@ -16,4 +16,7 @@
     "url": "https://github.com/ahmed-shahrour/alexa-game/issues"
   },
   "homepage": "https://github.com/ahmed-shahrour/alexa-game#readme",
+  "dependencies": {
+    "ask-sdk": "^2.12.0"
+  }
 }
