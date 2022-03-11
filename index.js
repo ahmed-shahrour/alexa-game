@@ -7,11 +7,11 @@ const LaunchRequestHandler = {
     );
   },
   handle(handlerInput) {
-    const speakOutput = 'Welcome to the Alexa Skills Kit, you can say hello!';
-
+    const speechText =
+      'Welcome to Fizz Buzz. We\'ll each take turns counting up from one. However, you must replace numbers divisible by 3 with the word "fizz" and you must replace numbers divisible by 5 with the word "buzz". If a number is divisible by both 3 and 5, you should instead say "fizz buzz". If you get one wrong, you lose.';
     return handlerInput.responseBuilder
-      .speak(speakOutput)
-      .reprompt(speakOutput)
+      .speak(speechText)
+      .reprompt(speechText)
       .getResponse();
   },
 };
