@@ -1,0 +1,22 @@
+{
+  "name": "alexa-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed-shahrour/alexa-game.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmed-shahrour/alexa-game/issues"
+  },
+  "homepage": "https://github.com/ahmed-shahrour/alexa-game#readme",
+  "dependencies": {
+    "ask-sdk": "^2.12.0"
+  }
+}
