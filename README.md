@@ -7,6 +7,12 @@ The code is in the `src` folder where you can find the handlers for different in
 You can find the `intents.json` file that I exported from the developer portal I used to create the required intents and slot types to create the game. Please import it into your delopment portal for the interface.
 
 ### Backend
+In the root, run the following code:
+
+```
+npm install
+```
+
 Please compress `src`,  `package.json`, and `node_modules` into a zip file and upload it to Amazon Lambda and connect the endpoint to the interface in the previous step. 
 
 ### Start the game
