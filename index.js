@@ -184,8 +184,12 @@ const ErrorHandler = {
 exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
+    StartGameIntentHandler,
+    InProgressGameIntentHandler,
+    HelpIntentHandler,
     CancelAndStopIntentHandler,
-    SessionEndedRequestHandler
+    RepeatIntentHandler,
+    InstructionsIntentHandler
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();
