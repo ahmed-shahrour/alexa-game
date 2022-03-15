@@ -127,7 +127,7 @@ const ErrorHandler = {
     return true;
   },
   handle(handlerInput, error) {
-    const speakOutput = `Sorry, I had trouble doing what you asked. Please try again.`;
+    const speakOutput = `Sorry, I had trouble understanding what you said. Please repeat your input.`;
     console.log(`Error handled: ${error.message}`);
 
     return handlerInput.responseBuilder
