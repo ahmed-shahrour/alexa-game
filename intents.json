@@ -1,0 +1,105 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fizz buzz",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "StartGameIntent",
+          "slots": [],
+          "samples": ["restart game", "restart", "start game", "start"]
+        },
+        {
+          "name": "InProgressGameIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "word",
+              "type": "FizzbuzzAnswers"
+            }
+          ],
+          "samples": [
+            "{number}",
+            "{word}",
+            "answer is {word}",
+            "number answer is {number}"
+          ]
+        },
+        {
+          "name": "RepeatIntent",
+          "slots": [],
+          "samples": [
+            "what did you say",
+            "say that again",
+            "repeat what you said",
+            "repeat"
+          ]
+        },
+        {
+          "name": "InstructionsIntent",
+          "slots": [],
+          "samples": [
+            "Game Instructions",
+            "What are the instructions",
+            "Instructions",
+            "Instruction"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "FizzbuzzAnswers",
+          "values": [
+            {
+              "name": {
+                "value": "fizz buzz",
+                "synonyms": [
+                  "fizzbus",
+                  "fazzbuzz",
+                  "fuzzbuzz",
+                  "fizboz",
+                  "fizbuz",
+                  "fizzbuzz"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "buzz",
+                "synonyms": ["bozz", "bos", "buz"]
+              }
+            },
+            {
+              "name": {
+                "value": "fizz",
+                "synonyms": ["fiz", "fis"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
