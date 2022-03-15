@@ -57,6 +57,13 @@ const InProgressGameIntentHandler = {
   handle(handlerInput) {
     const sessionAttributes =
       handlerInput.attributesManager.getSessionAttributes();
+      
+    if (!sessionAttributes.counter) {
+      return handlerInput.responseBuilder
+        .speak("I didn't start yet. Say START to begin.")
+        .reprompt("I didn't start yet. Say START to begin.")
+        .getResponse();
+    }
     sessionAttributes.counter += 1;
 
     const word = Alexa.getSlotValue(handlerInput.requestEnvelope, 'word');
@@ -85,7 +92,6 @@ const InProgressGameIntentHandler = {
       .getResponse();
   },
 };
-
 
 const RepeatIntentHandler = {
   canHandle(handlerInput) {
